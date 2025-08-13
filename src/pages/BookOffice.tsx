@@ -17,7 +17,7 @@ export default function BookOffice() {
         name: "",
         phone_number: "",
         started_at: "",
-        office_space_id: "",
+        office_space_id: 0,
         totalAmountWithUniqueCode: 0,
     })
 
@@ -33,7 +33,7 @@ export default function BookOffice() {
         axios
             .get(`http://127.0.0.1:8000/api/office/${slug}`, {
                 headers: {
-                    "X-API_KEY": "ggkjas78asdjgasjh8jj"
+                    "X-API-KEY": "ggkjas78asdjgasjh8jj"
                 },
             })
 
@@ -51,7 +51,7 @@ export default function BookOffice() {
                 setFormData((prevData) => ({
                     ...prevData,
                     office_space_id: officeSpaceId,
-                    total_amound: grandTotal,
+                    total_amount: grandTotal,
                 }))
 
                 setLoading(false);
@@ -322,12 +322,24 @@ export default function BookOffice() {
                         </div>
                         <div className="flex items-center justify-between">
                             <p className="font-semibold">Grand Total</p>
+                            							<p className="font-bold text-[22px] leading-[33px] text-[#0D903A]">
+								Rp {totalAmountWithUniqueCode.toLocaleString("id", {
+									minimumFractionDigits: 0,
+									maximumFractionDigits: 0,
+								})}
+							</p>
                             <p className="font-bold text-[22px] leading-[33px] text-[#0D903A]">
+                                							<p className="font-bold text-[22px] leading-[33px] text-[#0D903A]">
+								Rp {totalAmountWithUniqueCode.toLocaleString("id", {
+									minimumFractionDigits: 0,
+									maximumFractionDigits: 0,
+								})}
+							</p>
                                 Rp {totalAmountWithUniqueCode.toLocaleString("id", {
                                     minimumFractionDigits: 0,
                                     maximumFractionDigits: 0,
                                 })}
-                            </p>0
+                            </p>
                         </div>
                         <div className="relative rounded-xl p-[10px_20px] gap-[10px] bg-[#000929] text-white">
                             <img
