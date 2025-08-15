@@ -129,7 +129,7 @@ export default function BookOffice() {
             navigate("/success-booking", {
                 state: {
                     office,
-                    booking: response.data,
+                    booking: response.data.data,
                 },
             }
             );
