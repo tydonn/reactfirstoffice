@@ -301,6 +301,10 @@ export default function CheckBooking() {
                                     <p className="font-bold">{bookingDetails.booking_trx_id}</p>
                                 </div>
                                 <div className="flex items-center justify-between">
+                                    <p className="font-semibold">Duration</p>
+                                    <p className="font-bold">{bookingDetails.duration}</p>
+                                </div>
+                                <div className="flex items-center justify-between">
                                     <p className="font-semibold">Total Amount</p>
                                     <p className="font-bold text-[22px] leading-[33px] text-[#0D903A]">
                                         {new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(
