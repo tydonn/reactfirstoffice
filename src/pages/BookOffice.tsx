@@ -185,7 +185,7 @@ export default function BookOffice() {
                                     className="w-6 h-6"
                                     alt="icon"
                                 />
-                                <p className="font-semibold">{office.city.name}</p>
+                                <p className="font-semibold">{office.city?.name}</p>
                             </div>
                         </div>
                     </div>
@@ -328,18 +328,7 @@ export default function BookOffice() {
 									maximumFractionDigits: 0,
 								})}
 							</p>
-                            <p className="font-bold text-[22px] leading-[33px] text-[#0D903A]">
-                                							<p className="font-bold text-[22px] leading-[33px] text-[#0D903A]">
-								Rp {totalAmountWithUniqueCode.toLocaleString("id", {
-									minimumFractionDigits: 0,
-									maximumFractionDigits: 0,
-								})}
-							</p>
-                                Rp {totalAmountWithUniqueCode.toLocaleString("id", {
-                                    minimumFractionDigits: 0,
-                                    maximumFractionDigits: 0,
-                                })}
-                            </p>
+                            
                         </div>
                         <div className="relative rounded-xl p-[10px_20px] gap-[10px] bg-[#000929] text-white">
                             <img

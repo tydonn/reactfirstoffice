@@ -106,7 +106,7 @@ export default function Details() {
                                     className="w-6 h-6"
                                     alt="icon"
                                 />
-                                <p className="font-semibold">{office.city.name}</p>
+                                <p className="font-semibold">{office.city?.name}</p>
                             </div>
                         </div>
                         <div className="flex flex-col gap-[6px]">

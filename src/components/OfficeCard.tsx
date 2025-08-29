@@ -41,7 +41,7 @@ export default function OfficeCard({ office }: OfficeCardProps) {
                 className="w-6 h-6"
                 alt="icon"
               />
-              <p className="font-semibold">{office.city.name}</p>
+              <p className="font-semibold">{office.city?.name}</p>
             </div>
             <div className="flex items-center justify-end gap-[6px]">
               <p className="font-semibold">4.5/5</p>

@@ -5,11 +5,11 @@ export interface Office {
     duration: number;
     name: string;
     slug: string;
-    city: City;
+    city?: City;
     thumbnail: string;
     address: string;
-    photos: Photo[];
-    benefits: Benefit[];
+    photos?: Photo[];
+    benefits?: Benefit[];
     about: string;
 
 }
@@ -34,8 +34,8 @@ export interface City {
     name: string;
     slug: string;
     photo: string;
-    officeSpaces_count: number;
-    officeSpaces: Office[];
+    officeSpaces_count?: number;
+    officeSpaces?: Office[];
 
 }
 
@@ -50,6 +50,6 @@ export interface BookingDetails {
     total_amount: number;
     started_at: string;
     ended_at: string;
-    office: Office;
+    office?: Office;
 
 }
